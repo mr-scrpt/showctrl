@@ -51,7 +51,8 @@ export class ShowCtrl {
       this.#box.addClass(this.#libClass.box.init)
     }
     // EVENTS
-    this.#controller.on('click', () => {
+    this.#controller.on('click', (e) => {
+      e.stopPropagation()
       if (!this.isMobile()) return
       if (this.#status === 'close' || this.#status === 'init') {
         this.open()
@@ -66,6 +67,11 @@ export class ShowCtrl {
       } else {
         this.#controller.addClass(this.#libClass.controller.show)
         this.#box.addClass(this.#libClass.box.init)
+      }
+    })
+    $(window).on('click', () => {
+      if (this.isMobile() && this.#status === 'open') {
+        this.close()
       }
     })
   }
