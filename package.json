@@ -1,6 +1,6 @@
 {
   "name": "showctrl",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Allows you to make pull-down blocks by clicking on an element. The main purpose is to create adaptive menus",
   "main": "showctrl.js",
   "scripts": {

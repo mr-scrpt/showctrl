@@ -30,8 +30,6 @@ const options = {
   bp: 994, // the breakpoint at which the box becomes adaptive
 }
 
-Translated with www.DeepL.com/Translator (free version)
-
 
 // Create block with options
 new ShowCtrl(options)
